@@ -12,9 +12,18 @@
 <body>
 
   <header>
+    <div class="MainHeading"
+    id="tophead">
     <h1>SHERAZ KHAN</h1>
-    <nav>
-
+    </div>
+    <nav>    
+    <div class="Nav"
+    id="navheads">
+    <a>Home</a>
+    <a href="#aboutsect">About Me</a>
+    <a href="#worksect">Work</a>
+    <a href="#contactsect">Contact Me</a>
+    </div>
     </nav>
   </header>
 
@@ -27,16 +36,28 @@
   <section class="page-wrapper">
 
     <div class="page-section" id="about">
+      <a href="#aboutsect">
       <h2>ABOUT ME</h2>
+      </a>
     </div>
 
     <div class="page-section" id="work">
-      <h2>WORK</h2>
+      <a href="#worksect">
+        <h2>WORK</h2>
+        </a>
     </div>
 
-    <div class="page-section contact" id="contact">
-      <h2>CONTACT ME</h2>
+    <div class="page-section" id="contact">
+      <a href="#contactsect">
+        <h2>CONTACT ME</h2>
+        </a>
     </div>
+  </section>
+
+  <section class="mypic">
+    <img src="./images/Selfie.png" alt="Selfie"
+    height="auto"
+    width="50%">
   </section>
 
   <main class="info">
@@ -45,12 +66,46 @@
       <h3>About Me</h3>
     </div>
 
-    <div class="infosect" id="worksect">
-      <h3>Work</h3>
+    <div class="text" id="abouttext">
+      <p>Hi, I'm Sheraz Khan. I was born and raised in Luton. As a child I had a deep fascination with music and its capabilty to convey emotion. My interst in music grew and quite early in life I began rapping.
+        I've recently started my own sneaker restoration business and am also studying a Front-end Web Design course.
+        I'd like to go on to be an architect, one day in the future.
+        </p>
     </div>
 
     <div class="infosect" id="contactsect">
       <h3>Contact Me</h3>
+    </div>
+
+    <div class="text" id="contacttext">
+      <p>Email: sheraz.s.khan92@gmail.com</p>
+      <p>Phone: 07399055816</p>
+    </div>
+
+    <div class="infosect" id="worksect">
+      <h3>Work</h3>
+    </div>
+
+    <div class="pictext" id="worktext">
+      <div class="pics" id="port1">
+        <p>Surf Report</p>
+      </div>
+  
+      <div class="pics" id="port2">
+        <p>LED Wall</p>
+      </div>
+  
+      <div class="pics" id="port3">
+        <p>Calculator</p>
+      </div>
+  
+      <div class="pics" id="port4">
+        <p>Pastel Puzzle</p>
+      </div>
+  
+      <div class="pics" id="runbuddy">
+        <p>RunBuddy</p>
+      </div>
     </div>
 
   </main>

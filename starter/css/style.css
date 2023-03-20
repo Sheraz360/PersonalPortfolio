@@ -1,4 +1,5 @@
 html {
+  scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
@@ -16,35 +17,70 @@ p {
 }
 
 body {
-  height: 100%;
-  background: linear-gradient(
-    white,
-    rgb(70, 70, 70)
-  );
+  background-image: url(../images/02-hero-bg.jpg);
   margin: 0 auto;
   padding: 0;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   line-height: 1.5;
 }
 
-header h1 {
-  margin-top: 10px;
-  display: flex;
-  height: 60px;
-  align-items: center;
-  justify-content: center;
+.Nav a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  cursor: pointer;
+}
+.page-section a {
+  color: black;
+  text-decoration: none;
 }
 
-.hero-banner h2 {
-  margin-bottom: 20px;
+header {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "tophead navheads";
+  align-items: center;
+  background-color: firebrick;
+}
+
+#tophead {
+  margin-left: 10px;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-area: tophead;
+}
+
+#navheads {
+  grid-area: navheads;
+}
+
+.Nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hero-banner {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
   align-items: flex-end;
   justify-content: center;
 }
 
+.hero-banner h2 {
+  color: firebrick;
+}
+
 .page-wrapper {
-  margin: 15px;
-  height: 400px;
+  margin: 20px;
+  height: 150px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
@@ -55,61 +91,206 @@ header h1 {
   ;
 }
 
+.page-section h2 {
+  margin-left: 10px;
+}
+
 #about {
   margin: 5px;
   grid-area: about;
-  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: flex-start;  
-  background-image: url(../images/02-portfolio-1.jpg);
+  background-color: rgba(0, 255, 255, 0.502);
+  cursor: pointer;
 }
 
 #work {
   margin: 5px;
   grid-area: work;
-  align-items: baseline;
-  justify-content: flex-start;  
-  background-image: url(../images/02-portfolio-3.jpg);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(255, 238, 152, 0.516);
+  cursor: pointer;
 }
 
 #contact {
   margin: 5px;
   grid-area: contact;
-  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: flex-start;  
-  background-image: url(../images/02-portfolio-4.jpg);
+  background-color: rgba(255, 140, 0, 0.509);
+  cursor: pointer;
+}
+
+.mypic {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
 }
 
 .info {
-  margin: 20px;
+  margin: 25px;
+  background-color: rgba(255, 255, 255, 0.444);
   display: grid;
-  height: 400px;
-  align-items: flex-start;
-  justify-content: space-around;
-  grid-template-columns: 15% 85%;
-  grid-template-rows: 40% 40% 20%;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 25% 75%;
   grid-template-areas: 
-  "aboutheading aboutp"
-  "workheading workp"
-  "contactheading infop";
+  "abouthead aboutp"
+  "workhead workp"
+  "contacthead contactp";
+}
+
+.infosect {
+  border-right: 4px solid
+  rgb(56, 114, 127);
+  margin: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.infosect h3 {
+  margin-right: 10px;
 }
 
 #aboutsect {
+  margin-top: 20px;
+  font-size: xx-large;
+  height: auto;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  grid-area: aboutheading;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  grid-area: abouthead;
+}
+
+#abouttext {
+  margin: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: x-large;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  grid-area: aboutp;
 }
 
 #worksect {
+  font-size: xx-large;
+  height: auto;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  grid-area: workheading;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  grid-area: workhead;
 }
 
 #contactsect {
+  margin-bottom: 20px;
+  font-size: xx-large;
+  height: auto;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  grid-area: contactheading;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  grid-area: contacthead;
+}
+
+#contacttext {
+  font-size: x-large;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-area: contactp;
+}
+
+#worktext {
+  height: 1100px;
+  margin: 15px;
+  grid-area: workp;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 25% 25%;
+  grid-template-areas: 
+  "port1 port1"
+  "port2 port3"
+  "port4 runbuddy";
+}
+
+.pics {
+  margin: 5px;
+  cursor: pointer;
+}
+
+#port1 {
+  background-image: url(../images/02-portfolio-4.jpg);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  border: 5px solid rgb(0, 117, 168);
+  grid-area: port1;
+}
+
+#port2 {
+  background-image: url(../images/02-portfolio-1.jpg);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  border: 5px solid rgb(0, 117, 168);
+  grid-area: port2;
+}
+
+#port3 {
+  background-image: url(../images/02-portfolio-2.jpg);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  border: 5px solid rgb(0, 117, 168);
+  grid-area: port3;
+}
+
+#port4 {
+  background-image: url(../images/02-portfolio-3.jpg);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  border: 5px solid rgb(0, 117, 168);
+  grid-area: port4;
+}
+
+#runbuddy {
+  background-image: url(../images/02-run-buddy.jpg);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  border: 5px solid rgb(0, 117, 168);
+  grid-area: runbuddy;
+}
+
+.pics p {
+  border: 5px solid rgb(0, 117, 168);
+  background-color: rgb(0, 117, 168);
+}
+
+.text {
+  font-size: x-large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pictext {
+  font-size: xx-large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
