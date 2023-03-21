@@ -1,6 +1,6 @@
-#Portfolio Project
+#Portfolio Project#
 
-##My Personal Portfolio
+##My Personal Portfolio##
 
 I've created a page which has some info about me and includes my contact details.
 
